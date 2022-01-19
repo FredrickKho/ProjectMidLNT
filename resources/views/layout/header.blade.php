@@ -11,7 +11,7 @@
                     <a class="nav-link" href="{{ route("home") }}">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ route("create") }}">Create</a>
+                        <a class="nav-link" href="{{ route("createSite") }}">Create</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route("list") }}">View</a>

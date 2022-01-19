@@ -9,3 +9,24 @@ tr,th,td{
     border-right: 1px solid black;
     height: 40px;
 }
+.btn-danger{
+    margin:0;
+
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button-place{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button-place button{
+    margin:0;
+    width: 125px;
+}

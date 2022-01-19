@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,8 @@ use App\Http\Controllers\PageController;
 */
 
 
-Route::get('/',[PageController::class,'home'])->name("home");
-Route::get('/create',[PageController::class,'create'])->name("create");
-Route::get('/view',[PageController::class,'list'])->name("list");
+Route::get('/',[BookController::class,'home'])->name('home');
+Route::get('/create',[BookController::class,'createSite'])->name("createSite");
+Route::get('/book/list', [BookController::class, 'list'])->name("list");
+Route::post('/book/createbook', [BookController::class, 'create'])->name("create");
+Route::delete('/book/{id}-deleted',[BookController::class,'destroy'])->name("delete");
