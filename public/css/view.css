@@ -1,0 +1,11 @@
+.view-page{
+    height: 1000px;
+
+}
+.judul-kolom{
+    text-align: center;
+}
+tr,th,td{
+    border-right: 1px solid black;
+    height: 40px;
+}
