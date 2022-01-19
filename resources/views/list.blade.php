@@ -13,7 +13,6 @@
           </tr>
         </thead> 
         <tbody>
-          @
             <tr>
               <th scope="row"></th>
               <td></td>
