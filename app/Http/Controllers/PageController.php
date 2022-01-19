@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\book;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,16 +14,8 @@ class PageController extends Controller
         return view('create');
     //
     }
-    public function view(){
-        return view('view');
-    //
-    }
-    public function update(){
-        return view('update');
-    //
-    }
-    public function delete(){
-        return view('delete');
+    public function list(){
+        return view('list');
     //
     }
 }

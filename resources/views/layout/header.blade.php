@@ -8,19 +8,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="{{ route("home") }}">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/create">Create</a>
+                        <a class="nav-link" href="{{ route("create") }}">Create</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/view">View</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/update">Update</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/delete">Delete</a>
+                        <a class="nav-link" href="{{ route("list") }}">View</a>
                     </li>
                 </ul>
             </div>

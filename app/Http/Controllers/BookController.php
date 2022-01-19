@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\book;
+use Illuminate\Http\Request;
+use App\Models\Book;
 use App\Http\Requests\StorebookRequest;
 use App\Http\Requests\UpdatebookRequest;
 
@@ -23,9 +23,23 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'Title'=>['required','string','between:5,20'],
+            'Author'=>['required','string','between:5,20'],
+            'Total_page'=>['required','min:1'],
+            'Year'=>['required','between:2000,2021'],
+        ]);
+        if($validated){
+            Book::create([
+                'Title'=>$request->Title,
+                'Author'=>$request->Author,
+                'Total_page'=>$request->Total_page,
+                'Year'=>$request->Year,
+            ]);
+        };
+        return view("create-success");
     }
 
     /**
@@ -47,7 +61,8 @@ class BookController extends Controller
      */
     public function show(book $book)
     {
-        //
+        $books = Book::all();
+        return view("list",compact('books'));
     }
 
     /**

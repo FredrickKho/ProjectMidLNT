@@ -1,7 +1,8 @@
 <?php
-
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
-use App\http\controllers\pageController;
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +15,6 @@ use App\http\controllers\pageController;
 */
 
 
-Route::get('/',[PageController::class,'home']);
-Route::get('/create',[PageController::class,'create']);
-Route::get('/view',[PageController::class,'view']);
-Route::get('/update',[PageController::class,'update']);
-Route::get('/delete',[PageController::class,'delete']);
+Route::get('/',[PageController::class,'home'])->name("home");
+Route::get('/create',[PageController::class,'create'])->name("create");
+Route::get('/view',[PageController::class,'list'])->name("list");
