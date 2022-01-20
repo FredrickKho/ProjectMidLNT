@@ -12,7 +12,7 @@
 .form-group{
     margin-top: 50px;
 }
-h1{
+h1,h2{
     text-align: center;
     padding-top: 50px;
 }
@@ -24,4 +24,28 @@ button{
     margin-top: 100px;
     width: 200px;
     height: 50px;
+}
+.message{
+    background-color: rgba(131, 130, 130,20%);
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.message img{
+    height: 200px;
+    width: 200px;
+}
+.message p{
+    margin-top:30px;
+    font-size: 50px;
+}
+.message a{
+    width: 150px;
+    height: 50px;
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -23,7 +23,7 @@
               <td><div class="data">{{ $book->year }}</div></td>
               <td>
                 <div class="button-place">
-                  <button type="button"  class="btn btn-success">EDIT</button>
+                  <a href="{{ route("updatePage",$book->id) }}"  class="btn btn-success">EDIT</a>
                   <form action="{{ route('delete',$book->id) }}" method="POST">
                     @csrf
                     @method('DELETE')

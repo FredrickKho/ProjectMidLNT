@@ -26,7 +26,12 @@ tr,th,td{
     display: flex;
     justify-content: space-evenly;
 }
-.button-place button{
+.button-place button,a{
     margin:0;
     width: 125px;
+}
+.button-place a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

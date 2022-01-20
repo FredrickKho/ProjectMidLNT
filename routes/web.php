@@ -20,3 +20,5 @@ Route::get('/create',[BookController::class,'createSite'])->name("createSite");
 Route::get('/book/list', [BookController::class, 'list'])->name("list");
 Route::post('/book/createbook', [BookController::class, 'create'])->name("create");
 Route::delete('/book/{id}-deleted',[BookController::class,'destroy'])->name("delete");
+Route::get('/book/edit/{id}',[BookController::class,'updatePage'])->name('updatePage');
+Route::patch('/book/update/{id}',[BookController::class,'update'])->name("update");

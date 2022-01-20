@@ -16,6 +16,7 @@
         @yield('home')
         @yield('form')
         @yield('list')
+        @yield('createSuccessfull')
         @include('layout.footer')
     </body>
 </html>
