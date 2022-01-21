@@ -34,7 +34,7 @@ class BookController extends Controller
             'title'=>['required','string','between:5,20'],
             'author'=>['required','string','between:5,20'],
             'pages'=>['required','integer','min:1'],
-            'year'=>['required','integer','min:1999','max:2022'],
+            'year'=>['required','integer','min:2000','max:2021'],
         ]);
         if($validated){
             Book::create([
@@ -56,14 +56,23 @@ class BookController extends Controller
    
     public function update($id,Request $request,Book $book)
     {
-        Book::findOrFail($id)->update([
-            'title'=>$request->title,
-            'author'=>$request->author,
-            'pages'=>$request->pages,
-            'year'=>$request->year,
+        $validated = $request->validate([
+            'title'=>['required','string','between:5,20'],
+            'author'=>['required','string','between:5,20'],
+            'pages'=>['required','integer','min:1'],
+            'year'=>['required','integer','min:2000','max:2021'],
         ]);
-        $books = Book::all();
-        return view('list', compact('books'));
+        if($validated){
+            Book::findOrFail($id)->update([
+                'title'=>$request->title,
+                'author'=>$request->author,
+                'pages'=>$request->pages,
+                'year'=>$request->year,
+            ]);
+            $books = Book::all();
+            return view('list', compact('books'));
+        };
+        
     }
 
     public function destroy($id)
